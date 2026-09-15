@@ -1,0 +1,68 @@
+$date
+	Sat Aug 22 17:26:01 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module EBC_tb $end
+$var wire 1 ! L $end
+$var wire 1 " G $end
+$var wire 1 # E $end
+$var reg 8 $ A [7:0] $end
+$var reg 8 % B [7:0] $end
+$scope module uut $end
+$var wire 8 & A [7:0] $end
+$var wire 8 ' B [7:0] $end
+$var wire 1 # E $end
+$var wire 1 " G $end
+$var wire 1 ! L $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 '
+b1 &
+b0 %
+b1 $
+0#
+1"
+0!
+$end
+#10
+0"
+b1 %
+b1 '
+b0 $
+b0 &
+#20
+1"
+b0 %
+b0 '
+b11111111 $
+b11111111 &
+#30
+0"
+1#
+b11111111 %
+b11111111 '
+#40
+1!
+0"
+0#
+b10001000 %
+b10001000 '
+b1101110 $
+b1101110 &
+#50
+b1000000 %
+b1000000 '
+b101000 $
+b101000 &
+#60

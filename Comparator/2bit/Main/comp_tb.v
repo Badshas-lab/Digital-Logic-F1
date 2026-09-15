@@ -1,0 +1,49 @@
+`timescale 1ns/1ps
+module twoBC_tb;
+reg [1:0] A;
+reg [1:0] B;
+wire G;
+wire E;
+wire L;
+
+twoBC uut(
+    .A(A),
+    .B(B),
+    .G(G),
+    .E(E),
+    .L(L)
+);
+
+initial begin
+    $dumpfile("Comp.vcd");
+    $dumpvars(0, twoBC_tb);
+    $monitor("Time=%0t | A=%b B=%b | G=%b E=%b L=%b",
+    $time, A, B, G,E,L);
+
+    A=2'b00; B=2'b00;#10;
+    A=2'b00; B=2'b01;#10;
+    A=2'b00; B=2'b10;#10;
+    A=2'b00; B=2'b11;#10;
+    A=2'b01; B=2'b00;#10;
+    A=2'b01; B=2'b01;#10;
+    A=2'b01; B=2'b10;#10;
+    A=2'b01; B=2'b11;#10;
+    A=2'b10; B=2'b10;#10;
+    A=2'b10; B=2'b01;#10;
+    A=2'b10; B=2'b10;#10;
+    A=2'b10; B=2'b11;#10;
+    A=2'b11; B=2'b00;#10;
+    A=2'b11; B=2'b01;#10;
+    A=2'b11; B=2'b10;#10;
+    A=2'b11; B=2'b11;#10;
+
+ 
+
+    $finish;
+    
+   
+    
+
+
+end
+endmodule

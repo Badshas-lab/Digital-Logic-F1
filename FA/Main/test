@@ -1,0 +1,41 @@
+#! /usr/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x6207a7e21510 .scope module, "Full_adder" "Full_adder" 2 1;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "A";
+    .port_info 1 /INPUT 1 "B";
+    .port_info 2 /INPUT 1 "Cin";
+    .port_info 3 /OUTPUT 1 "Sum";
+    .port_info 4 /OUTPUT 1 "Cout";
+o0x7e13d3c89018 .functor BUFZ 1, C4<z>; HiZ drive
+o0x7e13d3c89048 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x6207a7e6a420 .functor XOR 1, o0x7e13d3c89018, o0x7e13d3c89048, C4<0>, C4<0>;
+o0x7e13d3c89078 .functor BUFZ 1, C4<z>; HiZ drive
+L_0x6207a7e6a510 .functor XOR 1, L_0x6207a7e6a420, o0x7e13d3c89078, C4<0>, C4<0>;
+L_0x6207a7e6a5b0 .functor AND 1, o0x7e13d3c89018, o0x7e13d3c89048, C4<1>, C4<1>;
+L_0x6207a7e6a6f0 .functor AND 1, o0x7e13d3c89018, o0x7e13d3c89078, C4<1>, C4<1>;
+L_0x6207a7e6a7e0 .functor OR 1, L_0x6207a7e6a5b0, L_0x6207a7e6a6f0, C4<0>, C4<0>;
+L_0x6207a7e6a8f0 .functor AND 1, o0x7e13d3c89048, o0x7e13d3c89078, C4<1>, C4<1>;
+L_0x6207a7e6a9a0 .functor OR 1, L_0x6207a7e6a7e0, L_0x6207a7e6a8f0, C4<0>, C4<0>;
+v0x6207a7e216a0_0 .net "A", 0 0, o0x7e13d3c89018;  0 drivers
+v0x6207a7e69bc0_0 .net "B", 0 0, o0x7e13d3c89048;  0 drivers
+v0x6207a7e69c80_0 .net "Cin", 0 0, o0x7e13d3c89078;  0 drivers
+v0x6207a7e69d50_0 .net "Cout", 0 0, L_0x6207a7e6a9a0;  1 drivers
+v0x6207a7e69e10_0 .net "Sum", 0 0, L_0x6207a7e6a510;  1 drivers
+v0x6207a7e69f20_0 .net *"_ivl_0", 0 0, L_0x6207a7e6a420;  1 drivers
+v0x6207a7e6a000_0 .net *"_ivl_10", 0 0, L_0x6207a7e6a8f0;  1 drivers
+v0x6207a7e6a0e0_0 .net *"_ivl_4", 0 0, L_0x6207a7e6a5b0;  1 drivers
+v0x6207a7e6a1c0_0 .net *"_ivl_6", 0 0, L_0x6207a7e6a6f0;  1 drivers
+v0x6207a7e6a2a0_0 .net *"_ivl_8", 0 0, L_0x6207a7e6a7e0;  1 drivers
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "Full_Adder.v";

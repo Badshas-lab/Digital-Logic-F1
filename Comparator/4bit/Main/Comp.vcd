@@ -1,0 +1,57 @@
+$date
+	Fri Aug 21 08:23:16 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module FBC_tb $end
+$var wire 1 ! L $end
+$var wire 1 " G $end
+$var wire 1 # E $end
+$var reg 4 $ A [3:0] $end
+$var reg 4 % B [3:0] $end
+$scope module uut $end
+$var wire 4 & A [3:0] $end
+$var wire 4 ' B [3:0] $end
+$var wire 1 # E $end
+$var wire 1 " G $end
+$var wire 1 ! L $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b0 '
+b0 &
+b0 %
+b0 $
+1#
+0"
+0!
+$end
+#10000
+1!
+0#
+b1 %
+b1 '
+#20000
+1"
+0!
+b0 %
+b0 '
+b10 $
+b10 &
+#30000
+0"
+1#
+b1111 %
+b1111 '
+b1111 $
+b1111 &
+#40000
